@@ -1,17 +1,17 @@
 httpie Cookbook
 ===============
-TODO: Enter the cookbook description here.
+This cookbook installs httpie 
 
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+https://github.com/jkbr/httpie
 
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
+This cookbook requires a few other cookbooks. 
 
-e.g.
-#### packages
-- `toaster` - httpie needs toaster to brown your bagel.
+#### cookbooks 
+python 
+yum 
+build-essential 
 
 Attributes
 ----------
@@ -27,19 +27,22 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['httpie']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['httpie']['version']</tt></td>
+    <td>String</td>
+    <td>Version of httpie</td>
+    <td><tt>0.6.0</tt></td>
   </tr>
+  <tr> 
+    <td><tt>['httpie']['arch']</tt></td> 
+    <td>String</td> 
+    <td>Architecture of client machine</td> 
+    <td><tt>kernel['machine'] =~ /x86_64/ ? "amd64" : "386" 
 </table>
 
 Usage
 -----
 #### httpie::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `httpie` in your node's `run_list`:
 
 ```json
@@ -53,9 +56,7 @@ Just include `httpie` in your node's `run_list`:
 
 Contributing
 ------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
 
-e.g.
 1. Fork the repository on Github
 2. Create a named feature branch (like `add_component_x`)
 3. Write you change
@@ -65,4 +66,4 @@ e.g.
 
 License and Authors
 -------------------
-Authors: TODO: List authors
+Authors: Miguel Alex Cantu
