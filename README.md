@@ -9,8 +9,8 @@ Requirements
 This cookbook requires a few other cookbooks. 
 
 #### cookbooks 
-python 
-yum 
+python,
+yum, 
 build-essential 
 
 Attributes
